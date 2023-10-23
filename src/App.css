@@ -1,38 +1,111 @@
-.App {
-  text-align: center;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #1d272f;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.animation,
+.animation_layer {
+  height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/*.animation {
+  display: block;
+  position: relative;
+  z-index: 10;
+}*/
+
+.animation_layer {
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: absolute;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.animation_layer.parallax {
+  position: fixed;
+}
+
+#layer_0 {
+  background-image: url(./images/layer0.png);
+  padding-top: 5%;
+}
+
+#layer_1 {
+  background-image: url(./images/layer1.png);
+  padding-top: 5%;
+}
+
+#layer_2 {
+  background-image: url(./images/layer2.png);
+  padding-top: 5%;
+}
+
+#layer_3 {
+  background-image: url(./images/layer3.png);
+  padding-top: 5%;
+}
+
+#layer_4 {
+  background-image: url(./images/layer4.png);
+  padding-top: 5%;
+}
+
+#layer_5 {
+  background-image: url(./images/layer5.png);
+  opacity: 0.5;
+  padding-top: 50%;
+  overflow: hidden;
+}
+
+.text {
+  background-color: #1d1c2c;
+  padding-top: 200px;
+  display: block;
+  height: 100vh;
+}
+
+#textblock {
+  background-color: #1d272f;
+  height: 100vh;
+}
+
+#textblock-container {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+#textblock-title {
+  color: #ffaf1b;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Helvetica Neue";
+}
+
+#textblock-content {
+  color: #ffaf1b;
+  font-size: 20px;
+}
+
+#textblock-footer {
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#textblock-devsense {
+  text-decoration: none;
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 600;
 }
